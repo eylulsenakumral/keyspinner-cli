@@ -1,0 +1,54 @@
+{
+  "name": "keyspinner-scan",
+  "version": "1.0.0",
+  "description": "CLI tool to scan GitHub repositories for leaked secrets",
+  "main": "dist/index.js",
+  "bin": {
+    "keyspinner": "./dist/cli.js"
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "node --test",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "cli",
+    "github",
+    "security",
+    "secrets",
+    "scan",
+    "credential-detection"
+  ],
+  "author": "Auto Company <dev@autocompany.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eylulsenakumral/keyspinner-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eylulsenakumral/keyspinner-cli/issues"
+  },
+  "homepage": "https://github.com/eylulsenakumral/keyspinner-cli#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@octokit/rest": "^22.0.1",
+    "chalk": "^5.4.1",
+    "cli-table3": "^0.6.3",
+    "commander": "^12.1.0",
+    "ora": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "^6.0.3"
+  }
+}
